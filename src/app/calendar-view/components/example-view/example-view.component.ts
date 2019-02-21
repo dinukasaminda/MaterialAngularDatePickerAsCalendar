@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+/***
+ * C dinuka saminda bandara
+ * dinukasaminda@gmail.com
+ */
 @Component({
   selector: 'app-example-view',
   templateUrl: './example-view.component.html',
