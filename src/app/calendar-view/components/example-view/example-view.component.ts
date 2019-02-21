@@ -13,4 +13,13 @@ export class ExampleViewComponent implements OnInit {
     this.selectedValue = event;
     console.log(event);
   }
+  _selectedChangeDateAsObject(
+    date: {
+      day: number;
+      month: number;
+      year: number;
+    } | null
+  ) {
+    console.log(date);
+  }
 }

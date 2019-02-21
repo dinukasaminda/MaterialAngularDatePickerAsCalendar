@@ -107,6 +107,11 @@ export class MatMonthView<D> implements AfterContentInit {
 
   /** Emits when a new date is selected. */
   @Output() readonly selectedChange: EventEmitter<D | null> = new EventEmitter<D | null>();
+  @Output() readonly selectedChangeDateAsObject: EventEmitter<{
+    day: number;
+    month: number;
+    year: number;
+  } | null> = new EventEmitter<{ day: number; month: number; year: number } | null>();
 
   /** Emits when any date is selected. */
   @Output() readonly _userSelection: EventEmitter<void> = new EventEmitter<void>();
@@ -174,8 +179,8 @@ export class MatMonthView<D> implements AfterContentInit {
       const selectedYear = this._dateAdapter.getYear(this.activeDate);
       const selectedMonth = this._dateAdapter.getMonth(this.activeDate);
       const selectedDate = this._dateAdapter.createDate(selectedYear, selectedMonth, date);
-      console.log([selectedYear, selectedMonth, date, selectedDate]);
       this.selectedChange.emit(selectedDate);
+      this.selectedChangeDateAsObject.emit({ year: selectedYear, month: selectedMonth, day: date });
     }
 
     this._userSelection.emit();

@@ -100,7 +100,6 @@ export class MatCalendarBody implements OnChanges {
 
   _cellClicked(cell: MatCalendarCell): void {
     if (cell.enabled) {
-      console.log(this.selectedValue);
       this.selectedValueChange.emit(cell.value);
     }
   }
