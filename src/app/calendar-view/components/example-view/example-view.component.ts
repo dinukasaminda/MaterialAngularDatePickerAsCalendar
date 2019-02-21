@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExampleViewComponent implements OnInit {
   constructor() {}
-
+  selectedValue = null;
   ngOnInit() {}
+  _selectedChange(event: any) {
+    this.selectedValue = event;
+    console.log(event);
+  }
 }

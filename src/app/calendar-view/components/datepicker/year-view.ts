@@ -246,7 +246,7 @@ export class MatYearView<D> implements AfterContentInit {
 
   /** Focuses the active cell after the microtask queue is empty. */
   _focusActiveCell() {
-    this._matCalendarBody._focusActiveCell();
+    // this._matCalendarBody._focusActiveCell();
   }
 
   /**

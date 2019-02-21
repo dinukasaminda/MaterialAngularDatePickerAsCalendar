@@ -1,3 +1,6 @@
 <div class="cont">
-  <mymat-calendar></mymat-calendar>
+  <mymat-calendar
+    (selectedChange)="_selectedChange($event)"
+    [selected]="selectedValue"
+  ></mymat-calendar>
 </div>
